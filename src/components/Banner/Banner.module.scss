@@ -4,6 +4,8 @@
 
     display: flex;
 
+    color: #022144;
+
     aside {
         width: 50%;
 
@@ -16,19 +18,83 @@
 
     .containerImagem {
         background-color: #fff;
+        padding: 0;
+
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .containerTitulo {
-        background-color: #f7fcfd;
+        background-color: #fafbfc;
+
+        span {
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
     }
 }
 
 .escuro {
     .containerImagem{
-        background-color: rgb(32, 31, 31)
+        background-color: #252525
     }
 
     .containerTitulo {
-        background-color: rgb(80, 78, 78)
+        background-color: #fafbfc
+    }
+}
+
+// Responsividade para diferentes tamanhos de tela
+// Tablet (768px)
+@media (max-width: 768px) {
+    .banner{
+        height: 80vh; // Ajuste a altura conforme necessário
+        flex-direction: column; // Ajuste a direção do flexbox para coluna
+
+        aside {
+            width: 100%; // Ajuste a largura do aside para 100%
+            padding: 14px; // Ajuste o padding conforme necessário
+        }
+
+        .containerImagem {
+            display: none;
+        }
+
+        .containerTitulo {
+            height: 100%;
+        }
+    }
+}
+
+// Mobile (375px)
+@media (max-width: 375px) {
+    .banner{
+        height: 75vh; // Ajuste a altura conforme necessário
+        flex-direction: column; // Ajuste a direção do flexbox para coluna
+
+        aside {
+            width: 100%; // Ajuste a largura do aside para 100%
+            padding: 12px; // Ajuste o padding conforme necessário
+        }
+    
+        .containerImagem {
+            display: none;
+        }
+
+        .containerTitulo {
+            height: 100%;
+        }
     }
 }

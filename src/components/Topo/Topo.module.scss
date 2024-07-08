@@ -2,17 +2,19 @@
     width: 100%;
     padding: 20px;
 
+    background-color: #fff;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 50px;
 
-    color: rgb(214, 169, 85);
+    color: #feb633;
 
         button {
             width: 40px;
             height: 40px;
-            padding: 10px;
+            padding: 6px;
 
             background-color: transparent;
 
@@ -27,19 +29,44 @@
                 width: 100%;
                 height: auto;
 
-                color: aqua;
+                color: rgb(47, 50, 228);
+
+                box-shadow: 1px 2px 4px black;
+                border-radius: 50%;
+                background-color: #daebfa;
+
+                padding: 4px;
             }
         }
 }
 
 .escuro {
-    background-color: rgb(32, 31, 31);
+    background-color: #252525;
 
         button {
             border-color: #fff;
 
         svg {
-            color: yellow;
+            color: #feb633;
+            background-color: transparent;
+            box-shadow: none;
         }
+    }
+}
+
+// Responsividade para diferentes tamanhos de tela
+// Tablet (768px)
+@media (max-width: 768px) {
+    .topo{
+        font-size: 35px; // Ajuste o tamanho da fonte conforme necessário
+        padding: 14px; // Ajuste o padding conforme necessário
+    }
+}
+
+// Mobile (375px)
+@media (max-width: 375px) {
+    .topo{
+        font-size: 30px; // Ajuste o tamanho da fonte conforme necessário
+        padding: 12px; // Ajuste o padding conforme necessário
     }
 }
